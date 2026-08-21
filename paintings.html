@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Paintings | Kimaya Kala</title>
+<title>Paintings | Kimaya Kalaa</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -340,14 +340,18 @@ body{
 
 }
 
-/* WHY */
+/* ===================================
+   WHY CHOOSE
+=================================== */
 
 .features{
 
     width:min(1200px,90%);
-    margin:90px auto;
+
+    margin:100px auto;
 
     display:grid;
+
     grid-template-columns:repeat(4,1fr);
 
     gap:25px;
@@ -358,39 +362,68 @@ body{
 
     background:#F8F1EA;
 
-    padding:35px;
+    padding:35px 25px;
 
     border-radius:22px;
 
     text-align:center;
 
+    transition:.35s;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+
 }
 
 .feature span{
 
+    display:block;
+
     font-size:2rem;
+
+    margin-bottom:15px;
 
 }
 
 .feature h3{
 
-    margin:15px 0;
+    margin-bottom:12px;
+
+    color:var(--text);
 
 }
 
-/* CTA */
+.feature p{
+
+    color:#777;
+
+    line-height:1.7;
+
+    font-size:.95rem;
+
+}
+
+
+/* ===================================
+   CTA
+=================================== */
 
 .cta{
 
+    width:min(1000px,90%);
+
     margin:100px auto;
 
-    width:min(1000px,90%);
+    padding:70px 40px;
 
     text-align:center;
 
     background:#E8EEDB;
-
-    padding:70px 40px;
 
     border-radius:35px;
 
@@ -400,13 +433,19 @@ body{
 
     font-size:3rem;
 
+    color:var(--text);
+
     margin-bottom:20px;
 
 }
 
 .cta p{
 
+    color:#666;
+
     margin-bottom:35px;
+
+    line-height:1.8;
 
 }
 
@@ -414,17 +453,30 @@ body{
 
     display:inline-block;
 
-    background:var(--accent);
-
-    color:white;
-
     padding:16px 36px;
 
     border-radius:50px;
 
+    background:var(--accent);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
-/* SPARKLES */
+.cta a:hover{
+
+    opacity:.9;
+
+}
+
+
+/* ===================================
+   SPARKLES
+=================================== */
 
 .sparkle{
 
@@ -434,25 +486,27 @@ body{
 
     opacity:.6;
 
-    font-size:26px;
+    pointer-events:none;
 
     z-index:2;
-
-    pointer-events:none;
 
 }
 
 .sparkle1{
 
-    top:115px;
+    top:120px;
+
     right:45%;
+
+    font-size:26px;
 
 }
 
 .sparkle2{
 
     top:300px;
-    right:93%;
+
+    left:5%;
 
     font-size:18px;
 
@@ -460,18 +514,105 @@ body{
 
 .sparkle3{
 
-    bottom:165px;
-    right:11%;
+    bottom:170px;
+
+    right:10%;
 
     font-size:24px;
 
 }
+/* ===================================
+   HERO - MOBILE
+=================================== */
 
-/* TABLET */
+@media(max-width:768px){
 
-@media(max-width:1024px){
+    .category-hero{
+
+        grid-template-columns:1fr;
+        gap:40px;
+
+        padding:90px 6% 60px;
+
+        text-align:center;
+
+    }
+
+    .category-content h1{
+
+        font-size:2.7rem;
+
+    }
+
+    .category-content p{
+
+        margin:20px auto 30px;
+
+        font-size:.95rem;
+
+    }
+
+    .category-image img{
+
+        max-width:340px;
+
+    }
+
+    .painting-hero-features{
+
+        max-width:100%;
+
+        margin:35px auto 0;
+
+    }
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+@media (max-width:1024px){
+
+    .category-hero{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+        text-align:center;
+
+    }
+
+    .category-content p{
+
+        margin:20px auto 35px;
+
+    }
+
+    .category-image img{
+
+        max-width:420px;
+
+    }
+
+    .painting-hero-features{
+
+        margin:40px auto 0;
+
+        max-width:420px;
+
+    }
 
     .painting-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:22px;
+
+    }
+
+    .features{
 
         grid-template-columns:repeat(2,1fr);
 
@@ -479,69 +620,249 @@ body{
 
 }
 
-/* MOBILE */
+@media (max-width:768px){
 
-@media(max-width:900px){
+    .category-hero{
 
-.category-hero{
+        padding:90px 6% 60px;
 
-grid-template-columns:1fr;
+        grid-template-columns:1fr;
 
-text-align:center;
+        gap:35px;
 
-}
+        text-align:center;
 
-.category-content p{
+    }
 
-margin:auto auto 35px;
+    .category-content h1{
 
-}
+        font-size:2.6rem;
 
-.features{
+    }
 
-grid-template-columns:repeat(2,1fr);
+    .category-content p{
 
-}
+        font-size:.95rem;
 
-}
+        line-height:1.7;
 
-@media(max-width:650px){
+        margin:18px auto 28px;
 
-.category-content h1{
+    }
 
-font-size:2.8rem;
+    .shop-btn{
 
-}
+        display:block;
 
-.painting-grid{
+        width:100%;
 
-grid-template-columns:1fr;
+        max-width:260px;
 
-}
+        margin:auto;
 
-.painting-collection{
+        text-align:center;
 
-padding:0 20px;
+    }
 
-}
+    .category-image img{
 
-.painting-image{
+        max-width:300px;
 
-height:300px;
+        border-radius:24px;
 
-}
+    }
 
-.painting-card-content h3{
+    .painting-hero-features{
 
-font-size:1.8rem;
+        max-width:100%;
 
-}
+        margin:30px auto 0;
 
-.features{
+        gap:15px;
 
-grid-template-columns:1fr;
+    }
 
-}
+    .painting-hero-feature{
+
+        width:100%;
+
+        padding:10px 14px;
+
+    }
+
+    .painting-feature-icon{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:1.3rem;
+
+    }
+
+    .painting-feature-text h4{
+
+        font-size:.95rem;
+
+    }
+
+    .painting-feature-text p{
+
+        font-size:.82rem;
+
+    }
+
+    .section-title{
+
+        margin:60px 0 40px;
+
+    }
+
+    .section-title h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .section-title p{
+
+        font-size:.9rem;
+
+    }
+
+    .painting-collection{
+
+        margin:70px auto;
+
+        padding:0 15px;
+
+    }
+
+    .painting-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
+
+    }
+
+    .painting-card{
+
+        border-radius:90px 90px 18px 18px;
+
+    }
+
+    .painting-image{
+
+        height:170px;
+
+        border-radius:90px 90px 0 0;
+
+    }
+
+    .painting-card-content{
+
+        padding:16px;
+
+    }
+
+    .painting-card-content h3{
+
+        font-size:1.25rem;
+
+        margin-bottom:8px;
+
+    }
+
+    .painting-card-content p{
+
+        font-size:.82rem;
+
+        line-height:1.5;
+
+    }
+
+    .features{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:16px;
+
+        margin:70px auto;
+
+    }
+
+    .feature{
+
+        padding:22px 15px;
+
+        border-radius:18px;
+
+    }
+
+    .feature span{
+
+        font-size:1.6rem;
+
+    }
+
+    .feature h3{
+
+        font-size:1.2rem;
+
+        margin:12px 0;
+
+    }
+
+    .feature p{
+
+        font-size:.85rem;
+
+    }
+
+    .cta{
+
+        margin:70px auto;
+
+        padding:45px 25px;
+
+        border-radius:24px;
+
+    }
+
+    .cta h2{
+
+        font-size:2rem;
+
+    }
+
+    .cta p{
+
+        font-size:.92rem;
+
+        line-height:1.6;
+
+    }
+
+    .cta a{
+
+        display:block;
+
+        width:100%;
+
+        max-width:260px;
+
+        margin:auto;
+
+        text-align:center;
+
+    }
+
+    .sparkle{
+
+        display:none;
+
+    }
 
 }
 </style>
@@ -554,31 +875,48 @@ grid-template-columns:1fr;
 
 <header>
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="logo">
+        <!-- Logo -->
 
-<img src="images/logo/logo.png">
+        <div class="logo">
 
-<div class="logo-text">
+            <a href="index.html#home">
+                <img src="images/logo/logo.png" alt="Kimaya Kala Logo">
+            </a>
 
-<h2>Kimaya Kala</h2>
+            <div class="logo-text">
 
-<p>Hand-crafted with प्रेम</p>
+                <h2>Kimaya Kalaa</h2>
+                <p>Hand-crafted with प्रेम</p>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-<ul class="nav-links">
+        <!-- Desktop Navigation -->
 
-<li><a href="index.html">Home</a></li>
-<li><a href="index.html#categories">Categories</a></li>
-<li><a href="index.html#contact">Contact</a></li>
+        <ul class="nav-links">
 
-</ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#review">Reviews</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
 
-</nav>
+        </ul>
+
+        <!-- Mobile Hamburger -->
+
+        <div class="menu-toggle" id="menu-toggle">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </nav>
 
 </header>
 
@@ -774,7 +1112,7 @@ Beautiful handcrafted paintings for every space and occasion.
 
 <div class="section-title">
 
-<h2>Why Choose Kimaya Kala?</h2>
+<h2>Why Choose Kimaya Kalaa?</h2>
 
 </div>
 
@@ -842,6 +1180,25 @@ Start Your Custom Order
 
 </section>
 
+
+<!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("active");
+
+    });
+
+}
+
+</script>
 </body>
 
 </html>

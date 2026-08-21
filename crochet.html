@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Crochet Creations | Kimaya Kala</title>
+<title>Crochet Creations | Kimaya Kalaa</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +18,9 @@
 <style>
 
 body{
+
     background:#FFF9F5;
+
 }
 
 /* ===================================
@@ -28,13 +30,17 @@ body{
 .crochet-hero{
 
     position:relative;
+
     overflow:hidden;
 
     padding:130px 8% 100px;
 
     display:grid;
+
     grid-template-columns:1fr 1fr;
+
     gap:70px;
+
     align-items:center;
 
     background:#FFF9F5;
@@ -48,15 +54,17 @@ body{
     position:absolute;
 
     width:520px;
+
     height:520px;
 
-    background:#E8EEDB;
-
     border-radius:50%;
+
+    background:#E8EEDB;
 
     opacity:.45;
 
     top:-220px;
+
     left:-220px;
 
 }
@@ -67,16 +75,18 @@ body{
 
     position:absolute;
 
-    width:420px;
-    height:420px;
+    width:430px;
 
-    background:#FFE4EA;
+    height:430px;
 
     border-radius:50%;
+
+    background:#FFE4EA;
 
     opacity:.35;
 
     bottom:-180px;
+
     right:-140px;
 
 }
@@ -85,6 +95,7 @@ body{
 .crochet-image{
 
     position:relative;
+
     z-index:2;
 
 }
@@ -92,7 +103,10 @@ body{
 .crochet-content h1{
 
     font-size:4rem;
+
     margin-bottom:20px;
+
+    color:var(--text);
 
 }
 
@@ -105,9 +119,12 @@ body{
 .crochet-content p{
 
     font-size:1.08rem;
+
     line-height:1.9;
-    margin-bottom:35px;
+
     max-width:560px;
+
+    margin-bottom:35px;
 
 }
 
@@ -115,39 +132,54 @@ body{
 
     display:inline-block;
 
-    background:var(--accent);
-
-    color:white;
-
     padding:16px 34px;
 
     border-radius:50px;
 
+    background:var(--accent);
+
+    color:#fff;
+
     font-weight:600;
+
+    transition:.3s;
+
+}
+
+.shop-btn:hover{
+
+    opacity:.9;
 
 }
 
 .crochet-image{
 
     display:flex;
+
     justify-content:center;
+
+    align-items:center;
 
 }
 
 .crochet-image img{
 
     width:100%;
+
     max-width:500px;
 
     aspect-ratio:4/5;
 
     object-fit:cover;
 
-    border-radius:30px;
+    border-radius:32px;
 
-    box-shadow:0 25px 60px rgba(0,0,0,.10);
+    box-shadow:
+        0 25px 60px rgba(0,0,0,.10),
+        0 10px 25px rgba(201,122,147,.10);
 
 }
+
 
 /* ===================================
    HERO FEATURES
@@ -157,63 +189,88 @@ body{
 
     display:flex;
 
+    flex-direction:column;
+
     gap:18px;
 
-    margin-top:40px;
+    margin-top:45px;
 
-    flex-wrap:wrap;
+    max-width:380px;
 
 }
 
 .crochet-feature{
 
-    background:#fff;
-
-    border-radius:60px;
-
-    padding:14px 18px;
-
     display:flex;
 
     align-items:center;
 
-    gap:14px;
+    gap:18px;
 
-    box-shadow:0 10px 25px rgba(0,0,0,.06);
+    background:#fff;
+
+    border-radius:60px;
+
+    padding:10px 14px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.crochet-feature:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
 
 }
 
 .crochet-icon{
 
-    width:52px;
-    height:52px;
+    width:58px;
+
+    height:58px;
 
     border-radius:50%;
 
-    background:#F7ECEF;
+    background:#F8F1EA;
 
     display:flex;
+
     justify-content:center;
+
     align-items:center;
 
-    font-size:1.3rem;
+    font-size:1.4rem;
+
+    flex-shrink:0;
 
 }
 
 .crochet-feature h4{
 
-    margin:0;
+    margin:0 0 6px;
+
     font-size:1rem;
+
+    color:var(--text);
 
 }
 
 .crochet-feature p{
 
-    margin:4px 0 0;
-    font-size:.88rem;
+    margin:0;
+
+    font-size:.9rem;
+
     color:#777;
 
+    line-height:1.5;
+
 }
+
 
 /* ===================================
    COLLECTION
@@ -221,8 +278,11 @@ body{
 
 .crochet-collection{
 
-    width:min(1250px,92%);
+    max-width:1400px;
+
     margin:100px auto;
+
+    padding:0 50px;
 
 }
 
@@ -230,23 +290,25 @@ body{
 
     display:grid;
 
-    grid-template-columns:repeat(3,1fr);
+    grid-template-columns:repeat(4,1fr);
 
-    gap:45px;
+    gap:40px;
 
     margin-top:60px;
 
 }
 
+/* Card */
+
 .crochet-card{
 
     background:#fff;
 
-    border-radius:180px 180px 28px 28px;
-
     overflow:hidden;
 
-    box-shadow:0 18px 45px rgba(0,0,0,.08);
+    border-radius:180px 180px 28px 28px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
 
     transition:.35s;
 
@@ -256,66 +318,85 @@ body{
 
     transform:translateY(-10px);
 
+    box-shadow:0 25px 55px rgba(0,0,0,.12);
+
 }
+
+/* Image */
 
 .crochet-card-image{
 
-    height:400px;
+    height:270px;
 
     overflow:hidden;
+
+    border-radius:180px 180px 0 0;
+
+    background:#F6EFE8;
 
 }
 
 .crochet-card-image img{
 
     width:100%;
+
     height:100%;
 
     object-fit:cover;
+
+    display:block;
 
     transition:.5s;
 
 }
 
-.crochet-card:hover img{
+.crochet-card:hover .crochet-card-image img{
 
     transform:scale(1.08);
 
 }
 
+/* Content */
+
 .crochet-card-content{
 
-    padding:28px;
-
-    text-align:center;
+    padding:25px 22px 30px;
 
 }
 
 .crochet-card-content h3{
 
+    font-family:"Cormorant Garamond",serif;
+
     font-size:2rem;
 
-    margin-bottom:12px;
+    color:#5A4145;
+
+    margin-bottom:14px;
 
 }
 
 .crochet-card-content p{
 
-    line-height:1.8;
+    font-family:"Poppins",sans-serif;
 
-    color:#6D6265;
+    color:#7B6467;
+
+    font-size:.95rem;
+
+    line-height:1.7;
 
 }
 
 /* ===================================
-   WHY CHOOSE US
+   WHY CHOOSE
 =================================== */
 
 .crochet-features{
 
     width:min(1200px,90%);
 
-    margin:90px auto;
+    margin:100px auto;
 
     display:grid;
 
@@ -329,25 +410,52 @@ body{
 
     background:#F8F1EA;
 
-    padding:35px;
+    padding:35px 25px;
 
     border-radius:22px;
 
     text-align:center;
 
+    transition:.35s;
+
+}
+
+.feature:hover{
+
+    transform:translateY(-8px);
+
+    box-shadow:0 18px 35px rgba(0,0,0,.08);
+
 }
 
 .feature span{
 
+    display:block;
+
     font-size:2rem;
+
+    margin-bottom:15px;
 
 }
 
 .feature h3{
 
-    margin:15px 0;
+    margin-bottom:12px;
+
+    color:var(--text);
 
 }
+
+.feature p{
+
+    color:#777;
+
+    line-height:1.7;
+
+    font-size:.95rem;
+
+}
+
 
 /* ===================================
    CTA
@@ -355,17 +463,17 @@ body{
 
 .cta{
 
-    margin:100px auto;
-
     width:min(1000px,90%);
 
-    background:#E8EEDB;
-
-    border-radius:35px;
+    margin:100px auto;
 
     padding:70px 40px;
 
     text-align:center;
+
+    background:#E8EEDB;
+
+    border-radius:35px;
 
 }
 
@@ -373,13 +481,19 @@ body{
 
     font-size:3rem;
 
+    color:var(--text);
+
     margin-bottom:20px;
 
 }
 
 .cta p{
 
+    color:#666;
+
     margin-bottom:35px;
+
+    line-height:1.8;
 
 }
 
@@ -387,15 +501,26 @@ body{
 
     display:inline-block;
 
-    background:var(--accent);
-
-    color:white;
-
     padding:16px 36px;
 
     border-radius:50px;
 
+    background:var(--accent);
+
+    color:#fff;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
+
+.cta a:hover{
+
+    opacity:.9;
+
+}
+
 
 /* ===================================
    SPARKLES
@@ -409,21 +534,27 @@ body{
 
     opacity:.6;
 
-    font-size:26px;
+    pointer-events:none;
+
+    z-index:2;
 
 }
 
 .sparkle1{
 
     top:120px;
+
     right:45%;
+
+    font-size:26px;
 
 }
 
 .sparkle2{
 
     top:300px;
-    left:4%;
+
+    left:5%;
 
     font-size:18px;
 
@@ -432,63 +563,330 @@ body{
 .sparkle3{
 
     bottom:170px;
+
     right:10%;
+
+    font-size:24px;
 
 }
 
 /* ===================================
-   MOBILE
+   RESPONSIVE
 =================================== */
 
-@media(max-width:900px){
+/* ---------- Tablet ---------- */
 
-.crochet-hero{
+@media (max-width:1024px){
 
-    grid-template-columns:1fr;
+    .crochet-hero{
 
-    text-align:center;
+        grid-template-columns:1fr;
+
+        gap:50px;
+
+        text-align:center;
+
+    }
+
+    .crochet-content p{
+
+        margin:20px auto 35px;
+
+    }
+
+    .crochet-image img{
+
+        max-width:420px;
+
+    }
+
+    .crochet-hero-features{
+
+        margin:40px auto 0;
+
+        max-width:420px;
+
+    }
+
+    .crochet-grid{
+
+        grid-template-columns:repeat(3,1fr);
+
+        gap:22px;
+
+    }
+
+    .crochet-features{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
 
 }
 
-.crochet-content p{
 
-    margin:auto auto 35px;
+/* ---------- Mobile ---------- */
 
-}
+@media (max-width:768px){
 
-.crochet-grid{
+    /* Hero */
 
-    grid-template-columns:1fr;
+    .crochet-hero{
 
-}
+        padding:90px 6% 60px;
 
-.crochet-features{
+        grid-template-columns:1fr;
 
-    grid-template-columns:repeat(2,1fr);
+        gap:35px;
 
-}
+        text-align:center;
 
-}
+    }
 
-@media(max-width:650px){
+    .crochet-content h1{
 
-.crochet-content h1{
+        font-size:2.6rem;
 
-    font-size:2.8rem;
+    }
 
-}
+    .crochet-content p{
 
-.crochet-features{
+        font-size:.95rem;
 
-    grid-template-columns:1fr;
+        line-height:1.7;
 
-}
+        margin:18px auto 28px;
 
-.crochet-card-image{
+    }
 
-    height:320px;
+    .shop-btn{
 
-}
+        display:block;
+
+        width:100%;
+
+        max-width:260px;
+
+        margin:auto;
+
+        text-align:center;
+
+    }
+
+    .crochet-image img{
+
+        max-width:300px;
+
+        border-radius:24px;
+
+    }
+
+    .crochet-hero-features{
+
+        max-width:100%;
+
+        margin:30px auto 0;
+
+        gap:15px;
+
+    }
+
+    .crochet-feature{
+
+        width:100%;
+
+        padding:10px 14px;
+
+    }
+
+    .crochet-icon{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:1.3rem;
+
+    }
+
+    .crochet-feature h4{
+
+        font-size:.95rem;
+
+    }
+
+    .crochet-feature p{
+
+        font-size:.82rem;
+
+    }
+
+
+    /* Section Titles */
+
+    .section-title{
+
+        margin:60px 0 40px;
+
+    }
+
+    .section-title h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .section-title p{
+
+        font-size:.9rem;
+
+    }
+
+
+    /* Collection */
+
+    .crochet-collection{
+
+        margin:70px auto;
+
+        padding:0 15px;
+
+    }
+
+    .crochet-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
+
+    }
+
+    .crochet-card{
+
+        border-radius:90px 90px 18px 18px;
+
+    }
+
+    .crochet-card-image{
+
+        height:170px;
+
+        border-radius:90px 90px 0 0;
+
+    }
+
+    .crochet-card-content{
+
+        padding:16px;
+
+    }
+
+    .crochet-card-content h3{
+
+        font-size:1.25rem;
+
+        margin-bottom:8px;
+
+    }
+
+    .crochet-card-content p{
+
+        font-size:.82rem;
+
+        line-height:1.5;
+
+    }
+
+
+    /* Features */
+
+    .crochet-features{
+
+        grid-template-columns:repeat(2,1fr);
+
+        gap:16px;
+
+        margin:70px auto;
+
+    }
+
+    .feature{
+
+        padding:22px 15px;
+
+        border-radius:18px;
+
+    }
+
+    .feature span{
+
+        font-size:1.6rem;
+
+    }
+
+    .feature h3{
+
+        font-size:1.2rem;
+
+        margin:12px 0;
+
+    }
+
+    .feature p{
+
+        font-size:.85rem;
+
+    }
+
+
+    /* CTA */
+
+    .cta{
+
+        margin:70px auto;
+
+        padding:45px 25px;
+
+        border-radius:24px;
+
+    }
+
+    .cta h2{
+
+        font-size:2rem;
+
+    }
+
+    .cta p{
+
+        font-size:.92rem;
+
+        line-height:1.6;
+
+    }
+
+    .cta a{
+
+        display:block;
+
+        width:100%;
+
+        max-width:260px;
+
+        margin:auto;
+
+        text-align:center;
+
+    }
+
+
+    /* Decorative */
+
+    .sparkle{
+
+        display:none;
+
+    }
 
 }
 
@@ -502,31 +900,48 @@ body{
 
 <header>
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="logo">
+        <!-- Logo -->
 
-<img src="images/logo/logo.png" alt="Kimaya Kala">
+        <div class="logo">
 
-<div class="logo-text">
+            <a href="index.html#home">
+                <img src="images/logo/logo.png" alt="Kimaya Kala Logo">
+            </a>
 
-<h2>Kimaya Kala</h2>
+            <div class="logo-text">
 
-<p>Hand-crafted with प्रेम</p>
+                <h2>Kimaya Kalaa</h2>
+                <p>Hand-crafted with प्रेम</p>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-<ul class="nav-links">
+        <!-- Desktop Navigation -->
 
-<li><a href="index.html">Home</a></li>
-<li><a href="index.html#categories">Categories</a></li>
-<li><a href="index.html#contact">Contact</a></li>
+        <ul class="nav-links">
 
-</ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#review">Reviews</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
 
-</nav>
+        </ul>
+
+        <!-- Mobile Hamburger -->
+
+        <div class="menu-toggle" id="menu-toggle">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </nav>
 
 </header>
 
@@ -715,7 +1130,7 @@ Beautiful handcrafted torans designed to welcome positivity into every home.
 <!-- ================= WHY US ================= -->
  <div class="section-title">
 
-<h2>Why Choose Kimaya Kala?</h2>
+<h2>Why Choose Kimaya Kalaa?</h2>
 
 </div>
 
@@ -803,6 +1218,25 @@ Start Your Custom Order
 
 </section>
 
+
+<!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("active");
+
+    });
+
+}
+
+</script>
 </body>
 
 </html>

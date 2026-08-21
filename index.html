@@ -7,11 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Website Title -->
-    <title>Kimaya Kala | Handmade with Love</title>
+    <title>Kimaya Kalaa | Handmade with Love</title>
 
     <!-- Website Description -->
     <meta name="description"
-        content="Kimaya Kala is a student-run handmade art studio creating personalized gifts, crochet products, festive décor, paintings, wedding items and custom handmade creations.">
+        content="Kimaya Kalaa is a student-run handmade art studio creating personalized gifts, crochet products, festive décor, paintings, wedding items and custom handmade creations.">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,7 +46,7 @@
 
             <div class="logo-text">
 
-                <h2>Kimaya Kala</h2>
+                <h2>Kimaya kalaa</h2>
                 <p>Hand-crafted with प्रेम</p>
 
             </div>
@@ -287,17 +287,17 @@
     <div class="about-section">
 
         <div class="about-image">
-            <img src="images/about/kimaya.jpg" alt="About Kimaya Kala">
+            <img src="images/about/kimaya.jpg" alt="About Kimaya Kalaa">
         </div>
 
         <div class="about-text">
 
-            <span class="about-tag">🌸 About Kimaya Kala</span>
+            <span class="about-tag">🌸 About Kimaya Kalaa</span>
 
             <h3>Small Steps. Big Dreams.</h3>
 
             <p>
-                Kimaya Kala began as a small dream while balancing student life.
+                Kimaya Kalaa began as a small dream while balancing student life.
                 What started as a simple hobby slowly grew into a creative space
                 where every handmade creation tells its own story.
             </p>
@@ -322,7 +322,7 @@
     <div class="about-section reverse">
 
         <div class="about-image">
-            <img src="images/about/artist.jpg" alt="Artist behind Kimaya Kala">
+            <img src="images/about/artist.jpg" alt="Artist behind Kimaya Kalaa">
         </div>
 
         <div class="about-text">
@@ -332,7 +332,7 @@
             <h3>The Hands Behind Kimaya</h3>
 
             <p>
-                Hi! I'm the artist behind Kimaya Kala.
+                Hi! I'm the artist behind Kimaya Kalaa.
                 I'm currently a student who has always loved creating things by hand.
                 Kimaya started as my hobby, but over time it became my little dream.
             </p>
@@ -344,7 +344,7 @@
             </p>
 
             <p>
-                Thank you for supporting my journey and helping Kimaya Kala grow,
+                Thank you for supporting my journey and helping Kimaya Kalaa grow,
                 one handmade creation at a time. ❤️
             </p>
 
@@ -380,7 +380,7 @@
 <section id="why">
 
     <div class="section-title">
-        <h2>Why Choose Kimaya Kala?</h2>
+        <h2>Why Choose Kimaya Kalaa?</h2>
         <p>Because every creation is made with heart, not by machines.</p>
     </div>
 
@@ -879,7 +879,7 @@ cards.forEach(card=>{
 
         <img src="images/logo/logo.png" alt="Kimaya Kala Logo" class="footer-logo">
 
-        <h3>Kimaya Kala</h3>
+        <h3>Kimaya Kalaa</h3>
 
         <p>
             Handmade creations crafted with love, creativity and a personal touch.
@@ -907,7 +907,7 @@ cards.forEach(card=>{
         </p>
 
         <p class="copyright">
-            © 2025 Kimaya Kala • Handmade with प्रेम
+            © 2025 Kimaya Kalaa • Handmade with प्रेम
         </p>
 
     </div>
@@ -919,24 +919,18 @@ cards.forEach(card=>{
     <script src="js/script.js"></script>
     <script>
 
-const toggle=document.getElementById("menu-toggle");
-const nav=document.querySelector(".nav-links");
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
 
-toggle.onclick=()=>{
+if(menuToggle){
 
-    nav.classList.toggle("active");
+    menuToggle.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("active");
+
+    });
 
 }
-
-document.querySelectorAll(".nav-links a").forEach(link=>{
-
-    link.onclick=()=>{
-
-        nav.classList.remove("active");
-
-    }
-
-});
 
 </script>
 

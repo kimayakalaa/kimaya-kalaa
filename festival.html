@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Festival Décor | Kimaya Kala</title>
+    <title>Festival Décor | Kimaya Kalaa</title>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -257,9 +257,9 @@
 
 }
 
-/* ===========================
+/* ===================================
    FESTIVAL COLLECTION
-=========================== */
+=================================== */
 
 .festival-collection{
 
@@ -283,8 +283,6 @@
 
 }
 
-/* Card */
-
 .festival-card{
 
     background:#fff;
@@ -307,11 +305,9 @@
 
 }
 
-/* Image */
-
 .festival-image{
 
-    height:300px;
+    height:270px;
 
     overflow:hidden;
 
@@ -324,6 +320,7 @@
 .festival-image img{
 
     width:100%;
+
     height:100%;
 
     object-fit:cover;
@@ -340,13 +337,9 @@
 
 }
 
-/* Content */
-
 .festival-card-content{
 
     padding:25px 22px 30px;
-
-    text-align:center;
 
 }
 
@@ -509,15 +502,66 @@
 
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+/* ===================================
+   HERO - MOBILE
+=================================== */
 
-@media(max-width:1024px){
+@media(max-width:768px){
 
     .category-hero{
 
         grid-template-columns:1fr;
+        gap:40px;
+
+        padding:90px 6% 60px;
+
+        text-align:center;
+
+    }
+
+    .category-content h1{
+
+        font-size:2.7rem;
+
+    }
+
+    .category-content p{
+
+        margin:20px auto 30px;
+
+        font-size:.95rem;
+
+    }
+
+    .category-image img{
+
+        max-width:340px;
+
+    }
+
+    .festival-hero-features{
+
+        max-width:100%;
+
+        margin:35px auto 0;
+
+    }
+
+}
+
+/* ===================================
+   RESPONSIVE
+=================================== */
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:1024px){
+
+    .category-hero{
+
+        grid-template-columns:1fr;
+
+        gap:50px;
 
         text-align:center;
 
@@ -525,19 +569,29 @@
 
     .category-content p{
 
-        margin:auto auto 35px;
+        margin:20px auto 35px;
+
+    }
+
+    .category-image img{
+
+        max-width:420px;
 
     }
 
     .festival-hero-features{
 
-        margin:45px auto 0;
+        margin:40px auto 0;
+
+        max-width:420px;
 
     }
 
     .festival-grid{
 
-        grid-template-columns:repeat(2,1fr);
+        grid-template-columns:repeat(3,1fr);
+
+        gap:22px;
 
     }
 
@@ -549,41 +603,265 @@
 
 }
 
-@media(max-width:650px){
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+    .category-hero{
+
+        padding:90px 6% 60px;
+
+        grid-template-columns:1fr;
+
+        gap:35px;
+
+        text-align:center;
+
+    }
 
     .category-content h1{
 
-        font-size:2.8rem;
+        font-size:2.6rem;
+
+    }
+
+    .category-content p{
+
+        font-size:.95rem;
+
+        line-height:1.7;
+
+        margin:18px auto 28px;
+
+    }
+
+    .shop-btn{
+
+        display:block;
+
+        width:100%;
+
+        max-width:260px;
+
+        margin:auto;
+
+        text-align:center;
+
+    }
+
+    .category-image img{
+
+        max-width:300px;
+
+        border-radius:24px;
+
+    }
+
+    .festival-hero-features{
+
+        max-width:100%;
+
+        margin:30px auto 0;
+
+        gap:15px;
+
+    }
+
+    .festival-hero-feature{
+
+        width:100%;
+
+        padding:10px 14px;
+
+    }
+
+    .festival-feature-icon{
+
+        width:52px;
+
+        height:52px;
+
+        font-size:1.3rem;
+
+    }
+
+    .festival-feature-text h4{
+
+        font-size:.95rem;
+
+    }
+
+    .festival-feature-text p{
+
+        font-size:.82rem;
+
+    }
+
+
+    /* Section Titles */
+
+    .section-title{
+
+        margin:60px 0 40px;
+
+    }
+
+    .section-title h2{
+
+        font-size:2.2rem;
+
+    }
+
+    .section-title p{
+
+        font-size:.9rem;
+
+    }
+
+
+    /* Collection */
+
+    .festival-collection{
+
+        margin:70px auto;
+
+        padding:0 15px;
 
     }
 
     .festival-grid{
 
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
+
+        gap:18px;
 
     }
 
-    .festival-collection{
+    .festival-card{
 
-        padding:0 20px;
+        border-radius:90px 90px 18px 18px;
 
     }
 
     .festival-image{
 
-        height:300px;
+        height:170px;
+
+        border-radius:90px 90px 0 0;
+
+    }
+
+    .festival-card-content{
+
+        padding:16px;
 
     }
 
     .festival-card-content h3{
 
-        font-size:1.8rem;
+        font-size:1.25rem;
+
+        margin-bottom:8px;
 
     }
 
+    .festival-card-content p{
+
+        font-size:.82rem;
+
+        line-height:1.5;
+
+    }
+
+
+    /* Features */
+
     .features{
 
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
+
+        gap:16px;
+
+        margin:70px auto;
+
+    }
+
+    .feature{
+
+        padding:22px 15px;
+
+        border-radius:18px;
+
+    }
+
+    .feature span{
+
+        font-size:1.6rem;
+
+    }
+
+    .feature h3{
+
+        font-size:1.2rem;
+
+        margin:12px 0;
+
+    }
+
+    .feature p{
+
+        font-size:.85rem;
+
+    }
+
+
+    /* CTA */
+
+    .cta{
+
+        margin:70px auto;
+
+        padding:45px 25px;
+
+        border-radius:24px;
+
+    }
+
+    .cta h2{
+
+        font-size:2rem;
+
+    }
+
+    .cta p{
+
+        font-size:.92rem;
+
+        line-height:1.6;
+
+    }
+
+    .cta a{
+
+        display:block;
+
+        width:100%;
+
+        max-width:260px;
+
+        margin:auto;
+
+        text-align:center;
+
+    }
+
+
+    /* Decorative */
+
+    .sparkle{
+
+        display:none;
 
     }
 
@@ -599,33 +877,48 @@
 
 <header>
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="logo">
+        <!-- Logo -->
 
-<img src="images/logo/logo.png">
+        <div class="logo">
 
-<div class="logo-text">
+            <a href="index.html#home">
+                <img src="images/logo/logo.png" alt="Kimaya Kala Logo">
+            </a>
 
-<h2>Kimaya Kala</h2>
+            <div class="logo-text">
 
-<p>Hand-crafted with प्रेम</p>
+                <h2>Kimaya Kalaa</h2>
+                <p>Hand-crafted with प्रेम</p>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-<ul class="nav-links">
+        <!-- Desktop Navigation -->
 
-<li><a href="index.html">Home</a></li>
+        <ul class="nav-links">
 
-<li><a href="index.html#categories">Categories</a></li>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#review">Reviews</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
 
-<li><a href="index.html#contact">Contact</a></li>
+        </ul>
 
-</ul>
+        <!-- Mobile Hamburger -->
 
-</nav>
+        <div class="menu-toggle" id="menu-toggle">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </nav>
 
 </header>
 
@@ -843,7 +1136,7 @@ Elegant handcrafted pearl garlands for festive decoration and pooja décor.
 
 <div class="section-title">
 
-<h2>Why Choose Kimaya Kala?</h2>
+<h2>Why Choose Kimaya Kalaa?</h2>
 
 </div>
 
@@ -929,6 +1222,25 @@ Start Your Custom Order
 
 </section>
 
+
+<!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("active");
+
+    });
+
+}
+
+</script>
 </body>
 
 </html>

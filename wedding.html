@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Wedding Essentials | Kimaya Kala</title>
+<title>Wedding Essentials | Kimaya Kalaa</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -490,80 +490,181 @@ body{
 
 }
 
-/* ===========================
-   RESPONSIVE
-=========================== */
+/* ===================================
+   HERO - MOBILE
+=================================== */
 
-@media(max-width:992px){
+@media(max-width:768px){
 
     .category-hero{
 
         grid-template-columns:1fr;
+        gap:40px;
+
+        padding:90px 6% 60px;
+
         text-align:center;
+
+    }
+
+    .category-content h1{
+
+        font-size:2.7rem;
 
     }
 
     .category-content p{
 
-        margin:auto auto 35px;
+        margin:20px auto 30px;
+        font-size:.95rem;
+
+    }
+
+    .category-image img{
+
+        max-width:340px;
 
     }
 
     .wedding-hero-features{
 
-        margin:45px auto 0;
-
-    }
-
-    .wedding-grid{
-
-        grid-template-columns:repeat(2,1fr);
-
-    }
-
-    .features{
-
-        grid-template-columns:repeat(2,1fr);
+        max-width:100%;
+        margin:35px auto 0;
 
     }
 
 }
 
-@media(max-width:650px){
 
-    .category-content h1{
+/* ===================================
+   RESPONSIVE COLLECTION
+=================================== */
 
-        font-size:2.8rem;
+@media(max-width:1024px){
+
+    .wedding-grid{
+
+        grid-template-columns:repeat(3,1fr);
+        gap:20px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .wedding-collection{
+
+        padding:0 15px;
+        margin:70px auto;
 
     }
 
     .wedding-grid{
 
-        grid-template-columns:1fr;
-
-    }
-
-    .wedding-collection{
-
-        padding:0 20px;
+        grid-template-columns:repeat(3,1fr);
+        gap:14px;
 
     }
 
     .wedding-image{
 
-        height:300px;
+        height:120px;
+        border-radius:80px 80px 0 0;
+
+    }
+
+    .wedding-card{
+
+        border-radius:80px 80px 18px 18px;
+
+    }
+
+    .wedding-card-content{
+
+        padding:14px 12px 18px;
 
     }
 
     .wedding-card-content h3{
 
-        font-size:1.8rem;
+        font-size:1rem;
+        margin-bottom:8px;
 
     }
 
+    .wedding-card-content p{
+
+        font-size:.75rem;
+        line-height:1.45;
+
+    }
+
+}
+
+
+/* ===================================
+   WHY CHOOSE - MOBILE
+=================================== */
+
+@media(max-width:768px){
+
     .features{
 
-        grid-template-columns:1fr;
+        grid-template-columns:repeat(2,1fr);
+        gap:16px;
+
+    }
+
+    .feature{
+
+        padding:22px 15px;
+
+    }
+
+    .feature span{
+
+        font-size:1.7rem;
+
+    }
+
+    .feature h3{
+
+        font-size:1.2rem;
+
+    }
+
+    .feature p{
+
+        font-size:.85rem;
+
+    }
+
+}
+
+
+/* ===================================
+   CTA - MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .cta{
+
+        margin:70px auto;
+        padding:45px 25px;
+
+    }
+
+    .cta h2{
+
+        font-size:2rem;
+
+    }
+
+    .cta p{
+
+        font-size:.95rem;
 
     }
 
@@ -579,31 +680,48 @@ body{
 
 <header>
 
-<nav class="navbar">
+    <nav class="navbar">
 
-<div class="logo">
+        <!-- Logo -->
 
-<img src="images/logo/logo.png">
+        <div class="logo">
 
-<div class="logo-text">
+            <a href="index.html#home">
+                <img src="images/logo/logo.png" alt="Kimaya Kala Logo">
+            </a>
 
-<h2>Kimaya Kala</h2>
+            <div class="logo-text">
 
-<p>Hand-crafted with प्रेम</p>
+                <h2>Kimaya Kalaa</h2>
+                <p>Hand-crafted with प्रेम</p>
 
-</div>
+            </div>
 
-</div>
+        </div>
 
-<ul class="nav-links">
+        <!-- Desktop Navigation -->
 
-<li><a href="index.html">Home</a></li>
-<li><a href="index.html#categories">Categories</a></li>
-<li><a href="index.html#contact">Contact</a></li>
+        <ul class="nav-links">
 
-</ul>
+            <li><a href="index.html#home">Home</a></li>
+            <li><a href="index.html#categories">Categories</a></li>
+            <li><a href="index.html#about">About</a></li>
+            <li><a href="index.html#review">Reviews</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
 
-</nav>
+        </ul>
+
+        <!-- Mobile Hamburger -->
+
+        <div class="menu-toggle" id="menu-toggle">
+
+            <span></span>
+            <span></span>
+            <span></span>
+
+        </div>
+
+    </nav>
 
 </header>
 
@@ -857,7 +975,7 @@ Handcrafted wedding décor and essentials created for beautiful celebrations.
 
 <div class="section-title">
 
-<h2>Why Choose Kimaya Kala?</h2>
+<h2>Why Choose Kimaya Kalaa?</h2>
 
 </div>
 
@@ -924,6 +1042,25 @@ Start Your Custom Order
 </a>
 
 </section>
+
+<!-- JavaScript -->
+    <script src="js/script.js"></script>
+    <script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navLinks = document.querySelector(".nav-links");
+
+if(menuToggle){
+
+    menuToggle.addEventListener("click",()=>{
+
+        navLinks.classList.toggle("active");
+
+    });
+
+}
+
+</script>
 
 </body>
 

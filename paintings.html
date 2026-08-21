@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Paintings | Kimaya Kala</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#FFF9F5;
+}
+
+/* HERO */
+
+.category-hero{
+
+    position:relative;
+    overflow:hidden;
+
+    padding:130px 8% 100px;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+    background:#FFF9F5;
+}
+
+.category-hero::before{
+
+    content:"";
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    border-radius:50%;
+
+    background:#E8EEDB;
+
+    opacity:.45;
+
+    top:-220px;
+    left:-220px;
+
+    z-index:0;
+}
+
+.category-hero::after{
+
+    content:"";
+    position:absolute;
+
+    width:430px;
+    height:430px;
+
+    border-radius:50%;
+
+    background:#FFDDE4;
+
+    opacity:.35;
+
+    bottom:-180px;
+    right:-140px;
+
+    z-index:0;
+}
+
+.category-content,
+.category-image{
+
+    position:relative;
+    z-index:2;
+
+}
+
+.category-content h1{
+
+    font-size:4rem;
+    color:var(--text);
+    margin-bottom:20px;
+
+}
+
+.category-content span{
+
+    color:var(--accent);
+
+}
+
+.category-content p{
+
+    font-size:1.1rem;
+    line-height:1.9;
+    max-width:560px;
+    margin-bottom:35px;
+
+}
+
+.shop-btn{
+
+    display:inline-block;
+    padding:16px 34px;
+    border-radius:50px;
+    background:var(--accent);
+    color:white;
+    font-weight:600;
+
+}
+
+.category-image{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.category-image img{
+
+    width:100%;
+    max-width:500px;
+    aspect-ratio:4/5;
+    object-fit:cover;
+    border-radius:32px;
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.10),
+    0 10px 25px rgba(201,122,147,.10);
+
+}
+
+/* ===========================
+   PAINTING HERO FEATURES
+=========================== */
+
+.painting-hero-features{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-top:45px;
+    max-width:380px;
+
+}
+
+.painting-hero-feature{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    background:#fff;
+    border-radius:60px;
+
+    padding:8px 9px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.painting-hero-feature:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+
+}
+
+.painting-feature-icon{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:#F8F1EA;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:1.5rem;
+
+    flex-shrink:0;
+
+}
+
+.painting-feature-text h4{
+
+    margin:0 0 6px;
+    font-size:1rem;
+    color:var(--text);
+
+}
+
+.painting-feature-text p{
+
+    margin:0;
+    font-size:.9rem;
+    color:#777;
+    line-height:1.5;
+
+}
+
+/* SECTION TITLE */
+
+.section-title{
+
+    text-align:center;
+    margin:70px 0;
+
+}
+
+.section-title h2{
+
+    font-size:3rem;
+
+}
+
+.section-title p{
+
+    margin-top:10px;
+
+}
+
+/* ==========================
+   PAINTING COLLECTION
+========================== */
+
+.painting-collection{
+
+    max-width:1400px;
+    margin:100px auto;
+    padding:0 50px;
+
+}
+
+.painting-grid{
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:40px;
+    margin-top:60px;
+
+}
+
+.painting-card{
+
+    background:#fff;
+
+    overflow:hidden;
+
+    border-radius:180px 180px 28px 28px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+}
+
+.painting-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.12);
+
+}
+
+.painting-image{
+
+    height:270px;
+
+    overflow:hidden;
+
+    border-radius:180px 180px 0 0;
+
+    background:#F6EFE8;
+
+}
+
+.painting-image img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+
+    transition:.5s;
+
+}
+
+.painting-card:hover .painting-image img{
+
+    transform:scale(1.08);
+
+}
+
+.painting-card-content{
+
+    padding:25px 22px 30px;
+
+}
+
+.painting-card-content h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+    color:#5A4145;
+
+    margin-bottom:14px;
+
+}
+
+.painting-card-content p{
+
+    font-family:"Poppins",sans-serif;
+
+    color:#7B6467;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+
+/* WHY */
+
+.features{
+
+    width:min(1200px,90%);
+    margin:90px auto;
+
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.feature{
+
+    background:#F8F1EA;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+}
+
+.feature span{
+
+    font-size:2rem;
+
+}
+
+.feature h3{
+
+    margin:15px 0;
+
+}
+
+/* CTA */
+
+.cta{
+
+    margin:100px auto;
+
+    width:min(1000px,90%);
+
+    text-align:center;
+
+    background:#E8EEDB;
+
+    padding:70px 40px;
+
+    border-radius:35px;
+
+}
+
+.cta h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    margin-bottom:35px;
+
+}
+
+.cta a{
+
+    display:inline-block;
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+}
+
+/* SPARKLES */
+
+.sparkle{
+
+    position:absolute;
+
+    color:#D8B56B;
+
+    opacity:.6;
+
+    font-size:26px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+.sparkle1{
+
+    top:115px;
+    right:45%;
+
+}
+
+.sparkle2{
+
+    top:300px;
+    right:93%;
+
+    font-size:18px;
+
+}
+
+.sparkle3{
+
+    bottom:165px;
+    right:11%;
+
+    font-size:24px;
+
+}
+
+/* TABLET */
+
+@media(max-width:1024px){
+
+    .painting-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.category-hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.category-content p{
+
+margin:auto auto 35px;
+
+}
+
+.features{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.category-content h1{
+
+font-size:2.8rem;
+
+}
+
+.painting-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.painting-collection{
+
+padding:0 20px;
+
+}
+
+.painting-image{
+
+height:300px;
+
+}
+
+.painting-card-content h3{
+
+font-size:1.8rem;
+
+}
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="images/logo/logo.png">
+
+<div class="logo-text">
+
+<h2>Kimaya Kala</h2>
+
+<p>Hand-crafted with प्रेम</p>
+
+</div>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+<li><a href="index.html#categories">Categories</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="category-hero">
+
+<div class="category-content">
+
+<h1>Handmade <span>Paintings</span></h1>
+
+<p>
+
+Bring colour, creativity and personality into your home with handcrafted paintings. From traditional Indian art to customized canvas creations, every piece is made with passion.
+
+</p>
+
+<a href="#collection" class="shop-btn">Browse Collection</a>
+
+<div class="painting-hero-features">
+
+<div class="painting-hero-feature">
+
+<div class="painting-feature-icon">🎨</div>
+
+<div class="painting-feature-text">
+
+<h4>Hand Painted</h4>
+
+<p>Every artwork is painted by hand.</p>
+
+</div>
+
+</div>
+
+<div class="painting-hero-feature">
+
+<div class="painting-feature-icon">🖌️</div>
+
+<div class="painting-feature-text">
+
+<h4>Custom Designs</h4>
+
+<p>Personalized according to your vision.</p>
+
+</div>
+
+</div>
+
+<div class="painting-hero-feature">
+
+<div class="painting-feature-icon">🖼️</div>
+
+<div class="painting-feature-text">
+
+<h4>Premium Quality</h4>
+
+<p>Perfect for gifting and home décor.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="category-image">
+
+<img src="images/paintings/hero.jpg" alt="Handmade Paintings">
+
+</div>
+
+<div class="sparkle sparkle1">✦</div>
+<div class="sparkle sparkle2">✦</div>
+<div class="sparkle sparkle3">✦</div>
+
+</section>
+
+<!-- OUR COLLECTION -->
+
+<section class="painting-collection" id="collection">
+
+<div class="section-title">
+
+<h2>Our Collection</h2>
+
+<p>
+
+Beautiful handcrafted paintings for every space and occasion.
+
+</p>
+
+</div>
+
+<div class="painting-grid">
+
+<div class="painting-card">
+
+<div class="painting-image">
+
+<img src="images/paintings/antarpat.jpg" alt="Antarpat Painting">
+
+</div>
+
+<div class="painting-card-content">
+
+<h3>Antarpat</h3>
+
+<p>Traditional Maharashtrian Antarpat artwork beautifully hand painted.</p>
+
+</div>
+
+</div>
+
+<div class="painting-card">
+
+<div class="painting-image">
+
+<img src="images/paintings/bags.jpg" alt="Bag Painting">
+
+</div>
+
+<div class="painting-card-content">
+
+<h3>Bags</h3>
+
+<p>Custom hand-painted tote bags and fabric accessories.</p>
+
+</div>
+
+</div>
+
+<div class="painting-card">
+
+<div class="painting-image">
+
+<img src="images/paintings/dupatta.jpg" alt="Dupatta Painting">
+
+</div>
+
+<div class="painting-card-content">
+
+<h3>Dupatta</h3>
+
+<p>Elegant hand-painted dupattas designed with traditional motifs.</p>
+
+</div>
+
+</div>
+
+<div class="painting-card">
+
+<div class="painting-image">
+
+<img src="images/paintings/saree-bags.jpg" alt="Saree Bags">
+
+</div>
+
+<div class="painting-card-content">
+
+<h3>Saree Bags</h3>
+
+<p>Beautiful hand-painted saree bags for weddings and gifting.</p>
+
+</div>
+
+</div>
+
+<div class="painting-card">
+
+<div class="painting-image">
+
+<img src="images/paintings/sup.jpg" alt="Sup Painting">
+
+</div>
+
+<div class="painting-card-content">
+
+<h3>Sup</h3>
+
+<p>Traditional painted bamboo Sup crafted for festive celebrations.</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<div class="section-title">
+
+<h2>Why Choose Kimaya Kala?</h2>
+
+</div>
+
+<section class="features">
+
+<div class="feature">
+
+<span>🎨</span>
+
+<h3>Hand Painted</h3>
+
+<p>Every artwork is painted with care and precision.</p>
+
+</div>
+
+<div class="feature">
+
+<span>✨</span>
+
+<h3>Unique Designs</h3>
+
+<p>No two creations are ever exactly the same.</p>
+
+</div>
+
+<div class="feature">
+
+<span>❤️</span>
+
+<h3>Custom Orders</h3>
+
+<p>Personalized paintings made just for you.</p>
+
+</div>
+
+<div class="feature">
+
+<span>🎁</span>
+
+<h3>Perfect Gifts</h3>
+
+<p>Meaningful handcrafted gifts for every occasion.</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Have a Painting Idea?</h2>
+
+<p>
+
+We'd love to bring your imagination to life with a completely customized artwork.
+
+</p>
+
+<a href="https://wa.me/919136813082">
+
+Start Your Custom Order
+
+</a>
+
+</section>
+
+</body>
+
+</html>

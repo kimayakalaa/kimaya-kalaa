@@ -1,0 +1,1022 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Personalized Fridge Magnets | Kimaya Kala</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+
+body{
+    background:#FFF9F5;
+}
+
+/* HERO */
+
+.category-hero{
+
+    position:relative;
+    overflow:hidden;
+
+    padding:130px 8% 100px;
+
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:70px;
+    align-items:center;
+
+    background:#FFF9F5;
+}
+
+.category-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:520px;
+    height:520px;
+
+    border-radius:50%;
+
+    background:#E8EEDB;
+
+    opacity:.45;
+
+    top:-220px;
+    left:-220px;
+
+    
+
+    z-index:0;
+
+}
+
+.category-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:430px;
+    height:430px;
+
+    border-radius:50%;
+
+    background:#FFDDE4;
+
+    opacity:.35;
+
+    bottom:-180px;
+    right:-140px;
+
+    
+
+    z-index:0;
+
+}
+
+.category-content,
+.category-image{
+
+    position:relative;
+
+    z-index:2;
+
+}
+
+.category-content h1{
+
+    font-size:4rem;
+
+    color:var(--text);
+
+    margin-bottom:20px;
+
+}
+
+.category-content span{
+
+    color:var(--accent);
+
+}
+
+.category-content p{
+
+    font-size:1.1rem;
+
+    line-height:1.9;
+
+    max-width:560px;
+
+    margin-bottom:35px;
+
+}
+
+.shop-btn{
+
+    display:inline-block;
+
+    padding:16px 34px;
+
+    border-radius:50px;
+
+    background:var(--accent);
+
+    color:white;
+
+    font-weight:600;
+
+}
+
+.category-image{
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.category-image img{
+
+    width:100%;
+    max-width:500px;
+
+    aspect-ratio:4/5;
+
+    object-fit:cover;
+
+    border-radius:32px;
+
+    
+
+    box-shadow:
+    0 25px 60px rgba(0,0,0,.10),
+    0 10px 25px rgba(201,122,147,.10);
+
+}
+
+/* ===========================
+   MAGNET HERO FEATURES
+=========================== */
+
+.magnet-hero-features{
+
+    display:flex;
+    flex-direction:column;
+    gap:18px;
+    margin-top:45px;
+    max-width:380px;
+
+}
+
+.magnet-hero-feature{
+
+    display:flex;
+    align-items:center;
+    gap:18px;
+
+    background:#ffffff;
+
+    border-radius: 60px;
+
+    padding: 8px 9px;
+
+    box-shadow:0 12px 30px rgba(0,0,0,.06);
+
+    transition:.35s;
+
+}
+
+.magnet-hero-feature:hover{
+
+    transform:translateY(-4px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.10);
+
+}
+
+.magnet-feature-icon{
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:#F8F1EA;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:1.5rem;
+
+    flex-shrink:0;
+
+}
+
+.magnet-feature-text h4{
+
+    margin:0 0 6px;
+
+    font-size:1rem;
+
+    color:var(--text);
+
+}
+
+.magnet-feature-text p{
+
+    margin:0;
+
+    font-size:.9rem;
+
+    color:#777;
+
+    line-height:1.5;
+
+}
+
+
+/* SECTION */
+
+.section-title{
+
+    text-align:center;
+
+    margin:70px 0;
+
+}
+
+.section-title h2{
+
+    font-size:3rem;
+
+}
+
+.section-title p{
+
+    margin-top:10px;
+
+}
+
+/* GALLERY */
+
+.product-grid{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:35px;
+
+    margin-bottom:90px;
+
+}
+
+.product-card{
+
+    background:white;
+
+    border-radius:25px;
+
+    overflow:hidden;
+
+    transition:.35s;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.06);
+
+}
+
+.product-card:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.product-card img{
+
+    width:100%;
+
+    height:280px;
+
+    object-fit:cover;
+
+}
+
+.product-info{
+
+    padding:22px;
+
+}
+
+.product-info h3{
+
+    margin-bottom:10px;
+
+}
+
+.product-info p{
+
+    margin-bottom:18px;
+
+    font-size:.95rem;
+
+}
+
+.price{
+
+    color:var(--accent);
+
+    font-weight:600;
+
+}
+
+/* WHY */
+
+.features{
+
+    width:min(1200px,90%);
+
+    margin:90px auto;
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:25px;
+
+}
+
+.feature{
+
+    background:#F8F1EA;
+
+    padding:35px;
+
+    border-radius:22px;
+
+    text-align:center;
+
+}
+
+.feature span{
+
+    font-size:2rem;
+
+}
+
+.feature h3{
+
+    margin:15px 0;
+
+}
+
+/* CTA */
+
+.cta{
+
+    margin:100px auto;
+
+    width:min(1000px,90%);
+
+    text-align:center;
+
+    background:#E8EEDB;
+
+    padding:70px 40px;
+
+    border-radius:35px;
+
+}
+
+.cta h2{
+
+    font-size:3rem;
+
+    margin-bottom:20px;
+
+}
+
+.cta p{
+
+    margin-bottom:35px;
+
+}
+
+.cta a{
+
+    display:inline-block;
+
+    background:var(--accent);
+
+    color:white;
+
+    padding:16px 36px;
+
+    border-radius:50px;
+
+}
+
+.sparkle{
+
+    position:absolute;
+
+    color:#D8B56B;
+
+    opacity:.6;
+
+    font-size:26px;
+
+    z-index:2;
+
+    pointer-events:none;
+
+}
+
+.sparkle1{
+
+    top: 115px;
+    right:45%;
+
+}
+
+.sparkle2{
+
+    top:300px;
+    right:93%;
+
+    font-size:18px;
+
+}
+
+.sparkle3{
+
+    bottom:165px;
+    right:11%;
+
+    font-size:24px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+.category-hero{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.category-content p{
+
+margin:auto auto 35px;
+
+}
+
+.features{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+}
+
+@media(max-width:650px){
+
+.category-content h1{
+
+font-size:2.8rem;
+
+}
+
+.features{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+/* ===================================
+   OUR COLLECTION
+=================================== */
+
+.magnet-collection{
+
+    max-width:1400px;
+
+    margin:100px auto;
+
+    padding:0 50px;
+
+}
+
+.magnet-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:40px;
+
+    margin-top:60px;
+
+}
+
+/* Card */
+
+.magnet-card{
+    background:#fff;
+    overflow:hidden;
+
+    border-radius:180px 180px 28px 28px;
+
+    box-shadow:0 15px 40px rgba(0,0,0,.08);
+    transition:.35s;
+}
+
+.magnet-card:hover{
+
+    transform:translateY(-10px);
+
+    box-shadow:0 25px 55px rgba(0,0,0,.12);
+
+}
+
+/* Arched Image */
+
+.magnet-image{
+    height:270px;
+    overflow:hidden;
+    border-radius:180px 180px 0 0;
+    background:#F6EFE8;
+}
+
+.magnet-image img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    display:block;
+    transition:.5s;
+}
+
+.magnet-card:hover .magnet-image img{
+    transform:scale(1.06);
+}
+
+.magnet-card:hover .magnet-image img{
+
+    transform:scale(1.08);
+
+}
+
+/* Content */
+
+.magnet-card-content{
+
+    padding:25px 22px 30px;
+
+}
+
+.magnet-card-content h3{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:2rem;
+
+    color:#5A4145;
+
+    margin-bottom:14px;
+
+}
+
+.magnet-card-content p{
+
+    font-family:"Poppins",sans-serif;
+
+    color:#7B6467;
+
+    font-size:.95rem;
+
+    line-height:1.7;
+
+}
+
+/* Tablet */
+
+@media(max-width:1024px){
+
+    .magnet-grid{
+
+        grid-template-columns:repeat(2,1fr);
+
+    }
+
+}
+
+/* Mobile */
+
+@media(max-width:650px){
+
+    .magnet-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .magnet-collection{
+
+        padding:0 20px;
+
+    }
+
+    .magnet-image{
+
+        height:300px;
+
+    }
+
+    .magnet-card-content h3{
+
+        font-size:1.8rem;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<header>
+
+<nav class="navbar">
+
+<div class="logo">
+
+<img src="images/logo/logo.png">
+
+<div class="logo-text">
+
+<h2>Kimaya Kala</h2>
+
+<p>Hand-crafted with प्रेम</p>
+
+</div>
+
+</div>
+
+<ul class="nav-links">
+
+<li><a href="index.html">Home</a></li>
+
+<li><a href="index.html#categories">Categories</a></li>
+
+<li><a href="index.html#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="category-hero">
+
+<div class="category-content">
+
+<h1>Personalized <span>Fridge Magnets</span></h1>
+
+<p>
+
+Celebrate memories with handmade personalized fridge magnets. Whether it's birthdays, weddings, anniversaries, baby announcements or special gifts, every piece is thoughtfully designed and crafted with love.
+
+</p>
+
+<a href="#collection" class="shop-btn">Browse Collection</a>
+
+<div class="magnet-hero-features">
+
+    <div class="magnet-hero-feature">
+
+        <div class="magnet-feature-icon">🎨</div>
+
+        <div class="magnet-feature-text">
+            <h4>Handcrafted</h4>
+            <p>Made with love & care</p>
+        </div>
+
+    </div>
+
+    <div class="magnet-hero-feature">
+
+        <div class="magnet-feature-icon">✨</div>
+
+        <div class="magnet-feature-text">
+            <h4>Personalized</h4>
+            <p>Designed just for you</p>
+        </div>
+
+    </div>
+
+    <div class="magnet-hero-feature">
+
+        <div class="magnet-feature-icon">🎁</div>
+
+        <div class="magnet-feature-text">
+            <h4>Gift Ready</h4>
+            <p>Perfect for every occasion</p>
+        </div>
+
+    </div>
+
+</div>
+
+</div>
+
+
+
+<div class="category-image">
+
+<img src="images/magnets/hero.jpg" alt="Fridge Magnets">
+
+</div>
+
+<div class="sparkle sparkle1">✦</div>
+<div class="sparkle sparkle2">✦</div>
+<div class="sparkle sparkle3">✦</div>
+
+
+
+</section>
+
+<!-- ================= OUR COLLECTION ================= -->
+
+<section class="magnet-collection" id="collection"></section>
+
+    <div class="section-title">
+
+        <h2>Our Collection</h2>
+
+        <p>
+            Every magnet is handcrafted with love and can be personalized to make your memories even more special.
+        </p>
+
+    </div>
+
+    <div class="magnet-grid">
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/veg-thali.jpg" alt="Veg Thali">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Veg Thali</h3>
+                <p>Authentic Maharashtrian thali recreated in miniature.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/fish-thali.jpg" alt="Fish Thali">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Fish Thali</h3>
+                <p>Coastal-inspired handcrafted fish thali magnet.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/south-thali.jpg" alt="South Indian Thali">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>South Indian Thali</h3>
+                <p>A miniature South Indian meal full of beautiful details.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/modak.jpg" alt="Modak">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Modak</h3>
+                <p>Perfect festive magnet inspired by Lord Ganesha's favourite sweet.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/chafa.jpg" alt="Chafa">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Chafa Flower</h3>
+                <p>Elegant floral magnet handcrafted with intricate detailing.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/crab.jpg" alt="Crab">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Crab</h3>
+                <p>Fun coastal-themed magnet made completely by hand.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/cats.jpg" alt="Cats">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Cat Collection</h3>
+                <p>Adorable handmade magnets for every cat lover.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/sunflower.jpg" alt="Sunflower">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Sunflower</h3>
+                <p>Bright handcrafted sunflower magnets to light up your fridge.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/pizza.jpg" alt="Pizza">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Pizza Slice</h3>
+                <p>Perfect miniature pizza magnets for food lovers.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/football.jpg" alt="Football Jerseys">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Football Jerseys</h3>
+                <p>Personalized jerseys featuring your favourite clubs.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/old-monk.jpg" alt="Old Monk">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Old Monk Bottle</h3>
+                <p>A miniature bottle magnet crafted with realistic detailing.</p>
+            </div>
+
+        </div>
+
+        <div class="magnet-card">
+
+            <div class="magnet-image">
+                <img src="images/magnets/custom.jpg" alt="Custom">
+            </div>
+
+            <div class="magnet-card-content">
+                <h3>Custom Designs</h3>
+                <p>Bring your own ideas to life with fully personalized magnets.</p>
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- WHY -->
+
+<div class="section-title">
+
+<h2>Why Choose Kimaya Kala?</h2>
+
+</div>
+
+<section class="features">
+
+<div class="feature">
+
+<span>🎨</span>
+
+<h3>Handmade</h3>
+
+<p>Every piece is crafted with care.</p>
+
+</div>
+
+<div class="feature">
+
+<span>❤️</span>
+
+<h3>Personalized</h3>
+
+<p>Designed especially for you.</p>
+
+</div>
+
+<div class="feature">
+
+<span>🎁</span>
+
+<h3>Gift Ready</h3>
+
+<p>Beautifully packed for every occasion.</p>
+
+</div>
+
+<div class="feature">
+
+<span>✨</span>
+
+<h3>Premium Finish</h3>
+
+<p>High-quality materials and detailing.</p>
+
+</div>
+
+</section>
+
+<!-- CTA -->
+
+<section class="cta">
+
+<h2>Looking for Something Unique?</h2>
+
+<p>
+
+Have a custom idea in mind? We'd love to create something exclusively for you.
+
+</p>
+
+<a href="https://wa.me/919136813082">Start Your Custom Order</a>
+
+</section>
+
+</body>
+
+</html>
